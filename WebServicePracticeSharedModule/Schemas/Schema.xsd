@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://www.tibco.com/schemas/Tibco_Practice/AbstractWSDL/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.tibco.com/schemas/Tibco_Practice/AbstractWSDL/Schema.xsd">
+	<xs:element name="InputRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="ID" type="xs:string"/>
+				<xs:element name="Age" type="xs:string"/>
+            </xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OutputRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Resonse" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="InputHeader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SerialNumber" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:complexType name="InputHeaderArray">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="InputHeader"/>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:element name="InputHeaderArray" type="InputHeaderArray"/>
+</xs:schema>
