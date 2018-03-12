@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1519972190033" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1519972190033">
+  <complexType name="SampleElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="glossary">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="title" type="string"/>
+            <element maxOccurs="1" minOccurs="0" name="GlossDiv">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="title" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="GlossList">
+                    <complexType>
+                      <sequence>
+                        <element maxOccurs="1" minOccurs="0" name="GlossEntry">
+                          <complexType>
+                            <sequence>
+                              <element maxOccurs="1" minOccurs="0" name="ID" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="SortAs" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="GlossTerm" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Acronym" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="Abbrev" type="string"/>
+                              <element maxOccurs="1" minOccurs="0" name="GlossDef">
+                                <complexType>
+                                  <sequence>
+                                    <element maxOccurs="1" minOccurs="0" name="para" type="string"/>
+                                    <element maxOccurs="unbounded" minOccurs="0" name="GlossSeeAlso" type="string"/>
+                                  </sequence>
+                                </complexType>
+                              </element>
+                              <element maxOccurs="1" minOccurs="0" name="GlossSee" type="string"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="SampleElement" type="tns:SampleElementType"/>
+</schema>

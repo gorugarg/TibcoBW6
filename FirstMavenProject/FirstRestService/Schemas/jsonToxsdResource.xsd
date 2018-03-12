@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1519971837030" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1519971837030">
+  <complexType name="jsonToxsdElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="title" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="properties">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="firstName">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="lastName">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="1" minOccurs="0" name="age">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="description" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="type" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="minimum" type="integer"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="required" type="string"/>
+    </sequence>
+  </complexType>
+  <element name="jsonToxsdElement" type="tns:jsonToxsdElementType"/>
+</schema>

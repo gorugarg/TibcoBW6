@@ -1,0 +1,79 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:9992",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-resource",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/InputHeader"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a InputHeader to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/InputHeader"
+            }
+          }
+        }
+      },
+      "get" : {
+        "description" : "",
+        "operationId" : "get-resource",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a InputRequest to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/InputRequest"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "InputRequest" : {
+      "type" : "object",
+      "required" : [ "ID", "Age", "Name" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "ID" : {
+          "type" : "string"
+        },
+        "Age" : {
+          "type" : "string"
+        }
+      }
+    },
+    "InputHeader" : {
+      "type" : "object",
+      "required" : [ "SerialNumber" ],
+      "properties" : {
+        "SerialNumber" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

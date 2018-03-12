@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<definitions targetNamespace = "http://xmlns.example.com/1519206125487" xmlns = "http://schemas.xmlsoap.org/wsdl/" xmlns:ns = "http://www.tibco.com/schemas/Tibco_Practice/AbstractWSDL/Schema.xsd" xmlns:tns = "http://xmlns.example.com/1519206125487" xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+	<import location = "../Schemas/Schema.xsd" namespace = "http://www.tibco.com/schemas/Tibco_Practice/AbstractWSDL/Schema.xsd"/>
+	<message name = "InputMessage">
+		<part element = "ns:InputRequest" name = "InputMessage"/>
+	</message>
+	<message name = "OutputMessage">
+		<part element = "ns:OutputRequest" name = "OutputRequest"/>
+	</message>
+	<message name = "InputHeader">
+		<part element = "ns:InputHeader" name = "InputHeader"/>
+	</message>
+	<portType name = "PortType">
+		<operation name = "Operation1">
+			<input message = "tns:InputMessage"/>
+			<output message = "tns:OutputMessage"/>
+		</operation>
+		<operation name = "Operation2">
+			<input message = "tns:OutputMessage"/>
+		</operation>
+	</portType>
+</definitions>
