@@ -1,0 +1,81 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Get Order Status",
+    "description" : "Get Order Status"
+  },
+  "host" : "localhost:9992",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/customerdetails" : {
+      "get" : {
+        "description" : "",
+        "operationId" : "get-customerdetails",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a OutputRequest to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/OutputRequest"
+            }
+          }
+        }
+      }
+    },
+    "/customerdetails1" : {
+      "post" : {
+        "description" : "",
+        "operationId" : "post-customerdetails1",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/InputRequest"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a OutputRequest to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/OutputRequest"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "InputRequest" : {
+      "type" : "object",
+      "required" : [ "ID", "Age", "Name" ],
+      "properties" : {
+        "Name" : {
+          "type" : "string"
+        },
+        "ID" : {
+          "type" : "string"
+        },
+        "Age" : {
+          "type" : "string"
+        }
+      }
+    },
+    "OutputRequest" : {
+      "type" : "object",
+      "required" : [ "Resonse" ],
+      "properties" : {
+        "Resonse" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
