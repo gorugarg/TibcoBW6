@@ -1,0 +1,18 @@
+Manifest-Version: 1.0.0.201803122146
+Bundle-ManifestVersion: 2
+Bundle-Name: WebServicePracticeSharedModule Module
+Bundle-SymbolicName: WebServicePracticeSharedModule
+Bundle-Version: 1.0.0.201803122146
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-SharedModule: META-INF/module.bwm
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)"
+Provide-Capability: com.tibco.bw.module; name="WebServicePracticeShare
+ dModule"; version:Version="1.0.0",com.tibco.bw.schemas; ns="http://ww
+ w.tibco.com/schemas/Tibco_Practice/AbstractWSDL/Schema.xsd",com.tibco
+ .bw.wsdls; ns="http://xmlns.example.com/1519206125487"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 6.4.2 V32 2017-11-05
+Bundle-ClassPath: .
+

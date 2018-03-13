@@ -1,0 +1,28 @@
+Manifest-Version: 1.0.0.201803122146
+Bundle-ManifestVersion: 2
+Bundle-Name: FirstRestService Module
+Bundle-SymbolicName: FirstRestService
+Bundle-Version: 1.0.0.201803122146
+Bundle-ClassPath: .
+Bundle-Vendor: TIBCO Software Inc.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+TIBCO-BW-Version: 6.4.2 V32 2017-11-05
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.module; filter:="(&(name=WebServicePracticeSharedModule)(versio
+ n=1.0.0))",com.tibco.bw.palette; filter:="(name=bw.generalactivities)
+ ",com.tibco.bw.palette; filter:="(name=bw.restjson)",com.tibco.bw.pal
+ ette; filter:="(name=bw.jms)",com.tibco.bw.palette; filter:="(name=bw
+ .xml)",com.tibco.bw.palette; filter:="(name=bw.http)",com.tibco.bw.sh
+ aredresource.model; filter:="(name=bw.authxml)",com.tibco.bw.sharedre
+ source.model; filter:="(name=bw.httpclient)",com.tibco.bw.sharedresou
+ rce.model; filter:="(name=bw.httpconnector)",com.tibco.bw.sharedresou
+ rce.model; filter:="(name=bw.jmsconnection)",com.tibco.bw.sharedresou
+ rce.model; filter:="(name=bw.cred)",com.tibco.bw.sharedresource.model
+ ; filter:="(name=bw.sslclient)",com.tibco.bw.sharedresource.model; fi
+ lter:="(name=bw.sslserver)",com.tibco.bw.binding.model; filter:="(nam
+ e=bw.rest)"
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+
