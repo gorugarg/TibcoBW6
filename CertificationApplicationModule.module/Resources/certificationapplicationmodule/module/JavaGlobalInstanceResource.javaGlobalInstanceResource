@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javasharedresource="http://ns.tibco.com/bw/palette/javasharedresource" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_4YqZ4Z7gEeiShNOC4IFbbw" name="certificationapplicationmodule.module.JavaGlobalInstanceResource" type="javasharedresource:JavaGlobalInstanceResource">
+  <jndi:configuration xsi:type="javasharedresource:JavaGlobalInstance" xmi:id="_4YqZ4p7gEeiShNOC4IFbbw" className="com.tibco.certification.HellowWorld_1382018" methodName="HellowWorld_1382018" invokeCleanupMethod="true" cleanupMethodName="CleanUpMethod" isNewShared="true">
+    <javaConstructorParameter xmi:id="_5xWrIZ7gEeiShNOC4IFbbw" paramName="a" paramType="int" paramValue="123"/>
+    <methodParameters xmi:id="_5xWrIJ7gEeiShNOC4IFbbw" paramType="int"/>
+  </jndi:configuration>
+</jndi:namedResource>

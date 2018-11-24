@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CertificationApplicationModule Module
+Bundle-SymbolicName: CertificationApplicationModule.module
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .,
+ .annoxfiles/
+Bundle-Vendor: TIBCO Software Inc.
+Export-Package: com.tibco.certification
+Require-Bundle: MyJavaModule;bundle-version="1.0.0",
+ JavaCustomFinction;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+TIBCO-BW-Version: 6.4.2 V32 2017-11-05
+Import-Package: com.tibco.bw.palette.shared.java;version="6.2.500",
+ com.tibco.bw.runtime;version="6.3.500"
+TIBCO-BW-Edition: bwcf
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.module; filter:="(&(name=SharedResources)(version=1.0.0))",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.jdbc)",
+ com.tibco.bw.palette; filter:="(name=bw.file)",
+ com.tibco.bw.palette; filter:="(name=bw.mail)",
+ com.tibco.bw.palette; filter:="(name=bw.restjson)",
+ com.tibco.bw.palette; filter:="(name=bw.java)",
+ com.tibco.bw.palette; filter:="(name=bw.jms)",
+ com.tibco.bw.palette; filter:="(name=bw.http)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.authxml)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.java)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.smtp)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslclient)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslserver)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.threadpool)",
+ com.tibco.bw.binding.model; filter:="(name=bw.rest)",
+ com.tibco.bw.binding.model; filter:="(name=bw.soap)"
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BWCE-Edition-Target: docker
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv

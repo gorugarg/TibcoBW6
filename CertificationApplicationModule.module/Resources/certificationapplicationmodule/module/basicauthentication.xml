@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realm xmlns="http://xsd.tns.tibco.com/trinity/realm/2013" hashAlgorithm="PBKDF2WithHmacSHA256" repetitionCount="10240" xsi:schemaLocation="http://xsd.tns.tibco.com/trinity/realm/2013 Realm.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <users>
+
+    <user>
+      <name>john</name>
+      <!-- specify password as follows:
+      <plaintext>password</plaintext>
+      -->
+      <password salt="KvhPubAduq91Iqb6YA6O/yfK">YdN2K1RHDZ12INoQY8YakICJETTtnSXSE9FC1afQIBg=</password>
+      <!-- attributes are optional -->
+      <attribute name="tel" oid="optional">123-555-1234</attribute>
+    </user>
+
+    <user>
+      <name>alex</name>
+      <plaintext>saurav</plaintext>
+    </user>
+
+  </users>
+
+  <group-mapping>
+    <group-name>managers</group-name>
+    <user-name>alex</user-name>
+  </group-mapping>
+
+  <group-mapping>
+    <group-name>administrators</group-name>
+    <user-name>alex</user-name>
+    <user-name>john</user-name>
+  </group-mapping>
+
+
+</realm>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/1531548455369" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.tibco.com/schemas/Tibco_Practice/ConcreteWebServiceandWSDl/Schema.xsd"  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1531548455369">
+    <wsdl:types>
+        <xs:schema xmlns="http://www.tibco.com/schemas/Tibco_Practice/ConcreteWebServiceandWSDl/Schema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/schemas/Tibco_Practice/ConcreteWebServiceandWSDl/Schema.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="FaultMessage">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="code" type="xs:string"/>
+                        <xs:element name="message" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="InputRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="EmpID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="OutputRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Result" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="root">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="ns0:InputRequest"/>
+                        <xs:element ref="ns0:OutputRequest"/>
+                        <xs:element ref="ns0:FaultMessage"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="WSDL-service0">
+        <wsdl:port name="PortTypeEndpoint0" binding="tns:PortTypeEndpoint0Binding">
+            <soap:address location="http://localhost:4692/ConcreteWebServiceandWSDl/WSDL-service0.serviceagent/PortTypeEndpoint0"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="PortType">
+        <wsdl:operation name="Operation2">
+            <wsdl:input message="tns:InputMessage"/>
+            <wsdl:output message="tns:OutputMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="Operation1">
+            <wsdl:input message="tns:InputMessage"/>
+            <wsdl:output message="tns:OutputMessage"/>
+            <wsdl:fault name="fault1" message="tns:FaultMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="PortTypeEndpoint0Binding" type="tns:PortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Operation2">
+            <soap:operation style="document" soapAction="/ConcreteWebServiceandWSDl/WSDL-service0.serviceagent/PortTypeEndpoint0/Operation2"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputRequest"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputReqeust"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="Operation1">
+            <soap:operation style="document" soapAction="/ConcreteWebServiceandWSDl/WSDL-service0.serviceagent/PortTypeEndpoint0/Operation1"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="InputRequest"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="OutputReqeust"/>
+            </wsdl:output>
+            <wsdl:fault name="fault1">
+                <soap:fault use="literal" name="fault1"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="InputMessage">
+        <wsdl:part name="InputRequest" element="ns0:InputRequest"/>
+    </wsdl:message>
+    <wsdl:message name="OutputMessage">
+        <wsdl:part name="OutputReqeust" element="ns0:OutputRequest"/>
+    </wsdl:message>
+    <wsdl:message name="FaultMessage">
+        <wsdl:part name="FaultMessage" element="ns0:FaultMessage"/>
+    </wsdl:message>
+</wsdl:definitions>

@@ -1,0 +1,16 @@
+<process-dir height="412" id="certificationapplicationmodule.module.Activator" name="certificationapplicationmodule.module.Activator" type="process" width="609" x="140" y="20">
+<partnerLinks>
+<partner-link id="ModuleActivator" myRole="use" name="ModuleActivator" partnerLinkType="partnerLinkType"/>
+</partnerLinks>
+<ProcessInfo createdBy="ggarg" createdOn="Sun Jun 24 13:21:26 IST 2018" description="" modifiedBy="" modifiedOn="" modifiers="public" productVersion="6.4.2 V32 2017-11-05" scalable="true" singleton="true" stateless="false" type="IT"/>
+<pick collapse="false" createInstance="true" height="303" id="3cb7effe-8939-454f-914a-9deaef8336bb" name="pick" type="pick" width="458" x="96" y="64">
+<on-message height="141" id="8c861723-9def-4442-b938-c6aa29a04b45" input="true" operation="onStartup" partner-link="ModuleActivator" portType="ModuleActivator" type="onMessage" variable="onStartup" width="440" x="-11" y="-9">
+<activity-dir height="16" id="d17f08d4-d757-4801-8a17-659ccb62e267" name="OnMessageStart" type="onMessageStart" width="16" x="-19" y="63"/>
+<activity-dir height="16" id="2a5eee06-7e7f-4d65-af02-fac1a23098cd" name="OnMessageEnd" type="onMessageEnd" width="16" x="438" y="63"/>
+</on-message>
+<on-message height="142" id="d99dfdb8-5525-4512-ab31-b81df7f98c3f" input="true" operation="onShutdown" partner-link="ModuleActivator" portType="ModuleActivator" type="onMessage" variable="onShutdown" width="440" x="-11" y="132">
+<activity-dir height="16" id="288e8c08-5f92-482d-b21c-4a67f0ceb3ac" name="OnMessageStart1" type="onMessageStart" width="16" x="-19" y="63"/>
+<activity-dir height="16" id="d232ac17-bb1b-43b2-aefc-bbe2fa6f6c3b" name="OnMessageEnd1" type="onMessageEnd" width="16" x="438" y="63"/>
+</on-message>
+</pick>
+</process-dir>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:keystore="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/cred/keystore" xmlns:sslserver="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslserver" xmi:id="_SLrHIZ7wEeiShNOC4IFbbw" name="certificationapplicationmodule.module.SSLServerResource" type="sslserver:SSLServerConfiguration">
+  <jndi:description>Its not enabled . To use it please follow the link https://community.tibco.com/wiki/how-enable-ssl-tibco-businessworkstm-6-container-edition . The reference given in IdentitiyStore provider is wrong . That jks file contains only public key not privae key . Even if you delete this resurce it wont lead to ay error anywhere in project.</jndi:description>
+  <jndi:reference xmi:id="_PKKa8J8REeiShNOC4IFbbw" key="identityStoreServiceProvider" type="keystore:KeystoreConfiguration" value="certificationapplicationmodule.module.KeystoreProviderResource"/>
+  <jndi:configuration xsi:type="sslserver:SSLServerConfiguration" xmi:id="_SLrHIp7wEeiShNOC4IFbbw" keyAlias="gauravgarg" keyPassword="#!9wk4p/Ga1qeJhNXTfLKqyumWERc9+5GB230jC7UUj8U="/>
+</jndi:namedResource>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CertificationApplication
+Bundle-SymbolicName: CertificationApplication
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BWCE-Edition-Target: docker
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 6.4.2 V32 2017-11-05
+TIBCO-BW-Application: META-INF/TIBCO.xml

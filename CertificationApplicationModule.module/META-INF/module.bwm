@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:Schema.xsd="http://www.tibco.com/schemas/Tibco_Practice/ConcreteWebServiceandWSDl/Schema.xsd" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:xmlns.example.com_1531548455369="http://xmlns.example.com/1531548455369" xmi:id="_e2hwYHb0EeiT95YrJFNZFg" targetNamespace="http://tns.tibco.com/bw/composite/CertificationApplicationModule.module" name="CertificationApplicationModule.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_XijRMHw-EeiXKOwEbq28Bw" name="resource" promote="ComponentResource/resource">
+    <sca:interface.wsdl xmi:id="_XinioHw-EeiXKOwEbq28Bw" interface="http://xmlns.example.com/20180630134954PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/certificationapplicationmodule/module/certificationpractice/Resource.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_XizI0Hw-EeiXKOwEbq28Bw" name="RestService" path="/resource" docBasePath="http://localhost:7777/CertificationApplicationModule.module" docResourcePath="Resource" basePath="/" connector="certificationapplicationmodule.module.HTTPConnectorResource1" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/certificationapplicationmodule.module.certificationpractice.Resource-Resource.json">
+      <operation xmi:id="_Xi4oYHw-EeiXKOwEbq28Bw" operationName="post" nickname="post-resource" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_c2IDoHw-EeiXKOwEbq28Bw" statusCode="200" reasonPhrase="OK" dataType="string"/>
+        <responseStatus xmi:id="_c-6MMHw-EeiXKOwEbq28Bw" statusCode="400" reasonPhrase="FuckOff" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_Xi-vAHw-EeiXKOwEbq28Bw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_Xi4oYXw-EeiXKOwEbq28Bw" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_GjG2UI8-Eei_SrsRl24ibw" name="resource1" promote="ComponentRest_MultipleResources/resource1">
+    <sca:interface.wsdl xmi:id="_Gj0oAI8-Eei_SrsRl24ibw" interface="http://xmlns.example.com/20180724180154PLT#wsdl.interface(resource1)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_GkOQoI8-Eei_SrsRl24ibw" name="RestService1" path="/resource1" docBasePath="http://localhost:7777/CertificationApplicationModule.module" docResourcePath="Resource1" basePath="/" connector="certificationapplicationmodule.module.HTTPConnectorResource1" opaqueData="true" technologyVersion="2.0" implementation="Service Descriptors/certificationapplicationmodule.module.certificationpractice.Rest_MultipleResources-Resource1.json">
+      <operation xmi:id="_GkUXQI8-Eei_SrsRl24ibw" operationName="post" nickname="post-resource1" httpMethod="POST" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_Gk1UoI8-Eei_SrsRl24ibw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_GkUXQY8-Eei_SrsRl24ibw" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_QUo-kI_-Eei_SrsRl24ibw" name="manuallcreatedswagger" promote="ComponentManuallyCreatedJSONRestService/manuallcreatedswagger">
+    <sca:interface.wsdl xmi:id="_QU3BAI_-Eei_SrsRl24ibw" interface="http://xmlns.example.com/20180725170014PLT#wsdl.interface(manuallcreatedswagger)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_QVIGwI_-Eei_SrsRl24ibw" name="RestService2" path="/manuallcreatedswagger" docBasePath="http://localhost:7777/CertificationApplicationModule.module" docResourcePath="Manuallcreatedswagger" basePath="/" connector="certificationapplicationmodule.module.HTTPConnectorResource1" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/manuallycreated.json">
+      <operation xmi:id="_QVLxII_-Eei_SrsRl24ibw" operationName="post" nickname="manuallycreatedswagger" httpMethod="POST" notes="" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_QW_H8I_-Eei_SrsRl24ibw"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_QVLxIY_-Eei_SrsRl24ibw" bindingName="RestService2"/>
+  </sca:service>
+  <sca:property xmi:id="_gOclkHb0EeiT95YrJFNZFg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gOisMHb0EeiT95YrJFNZFg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gOqA8Hb0EeiT95YrJFNZFg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gO4DYHb0EeiT95YrJFNZFg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gPHT8Hb0EeiT95YrJFNZFg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gPMMcHb0EeiT95YrJFNZFg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0TX3AHb1EeiT95YrJFNZFg" name="newModuleProperty" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_z-n1wHwpEeiT95YrJFNZFg" name="HTTPHOST" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_388sgHwpEeiT95YrJFNZFg" name="HTTPPORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vg2RIJ-PEeiShNOC4IFbbw" name="newmoduleprivateProperty" type="XMLSchema:string"/>
+  <sca:property xmi:id="_nmEC0LQ-Eei4048HOd8ogQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_aYm-gLRIEeifTaGv4ZZuDw" name="DB_URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_tDQ74Hb0EeiT95YrJFNZFg" name="ComponentCertificationProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tDQ74Xb0EeiT95YrJFNZFg" processName="certificationapplicationmodule.module.certificationpractice.CertificationProcess"/>
+  </sca:component>
+  <sca:component xmi:id="_D9O60HeFEeiT95YrJFNZFg" name="ComponentSubProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_D9O60XeFEeiT95YrJFNZFg" processName="certificationapplicationmodule.module.SubProcess"/>
+  </sca:component>
+  <sca:component xmi:id="_XibVYHw-EeiXKOwEbq28Bw" name="ComponentResource" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_XibVYXw-EeiXKOwEbq28Bw" processName="certificationapplicationmodule.module.certificationpractice.Resource"/>
+    <sca:service xmi:id="_Xifm0Hw-EeiXKOwEbq28Bw" name="resource">
+      <sca:interface.wsdl xmi:id="_XigN4Hw-EeiXKOwEbq28Bw" interface="http://xmlns.example.com/20180630134954PLT#wsdl.interface(resource)" scaext:wsdlLocation="../Processes/certificationapplicationmodule/module/certificationpractice/Resource.bwp"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_X1ciMIgqEeiioO9zrmCcjw" name="Componentcustomfucntion" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_X1ciMYgqEeiioO9zrmCcjw" processName="certificationapplicationmodule.module.certificationpractice.customfucntion"/>
+  </sca:component>
+  <sca:component xmi:id="_mOVucI89Eei_SrsRl24ibw" name="ComponentRest_MultipleResources" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_mOffcI89Eei_SrsRl24ibw" processName="certificationapplicationmodule.module.certificationpractice.Rest_OpaqueMode"/>
+    <sca:service xmi:id="_Gi2XoI8-Eei_SrsRl24ibw" name="resource1">
+      <sca:interface.wsdl xmi:id="_GjCk4I8-Eei_SrsRl24ibw" interface="http://xmlns.example.com/20180724180154PLT#wsdl.interface(resource1)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_GaaxII_-Eei_SrsRl24ibw" name="ComponentManuallyCreatedJSONRestService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_GaaxIY_-Eei_SrsRl24ibw" processName="certificationapplicationmodule.module.certificationpractice.ManuallyCreatedJSONRestService"/>
+    <sca:service xmi:id="_QUoXgI_-Eei_SrsRl24ibw" name="manuallcreatedswagger">
+      <sca:interface.wsdl xmi:id="_QUoXgY_-Eei_SrsRl24ibw" interface="http://xmlns.example.com/20180725170014PLT#wsdl.interface(manuallcreatedswagger)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_vxlEkKh-EeicYaG2s0bXiA" name="ComponentInlineSubprocessPOC" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_vxlEkah-EeicYaG2s0bXiA" processName="certificationapplicationmodule.module.InlineSubprocessPOC"/>
+  </sca:component>
+</sca:composite>
